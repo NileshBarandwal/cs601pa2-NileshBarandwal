@@ -1,0 +1,39 @@
+\doxysection{RDomain.\+h}
+\hypertarget{RDomain_8h_source}{}\label{RDomain_8h_source}\index{inc/RDomain.h@{inc/RDomain.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RDOMAIN\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RDOMAIN\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Domain.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRDomain}{RDomain}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classDomain}{Domain}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{double}\ length;\ \ \ \textcolor{comment}{//\ Length\ of\ the\ domain\ (for\ rectangular/1D\ domains)}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{double}\ deltaX;\ \ \ \textcolor{comment}{//\ Step\ size\ in\ x-\/direction\ for\ grid}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{double}\ deltaY;\ \ \ \textcolor{comment}{//\ Step\ size\ in\ y-\/direction\ for\ grid\ (only\ for\ rectangular)}}
+\DoxyCodeLine{00013\ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ std::vector<double>\ xGrid;\ \ \textcolor{comment}{//\ Grid\ in\ x-\/direction}}
+\DoxyCodeLine{00015\ \ \ \ \ std::vector<double>\ yGrid;\ \ \textcolor{comment}{//\ Grid\ in\ y-\/direction\ (empty\ for\ 1D)}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ Constructor\ to\ initialize\ the\ domain}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classRDomain}{RDomain}}(\textcolor{keywordtype}{double}\ length,\ \textcolor{keywordtype}{double}\ deltaX,\ \textcolor{keywordtype}{double}\ deltaY\ =\ 0);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Method\ to\ generate\ a\ rectangular\ grid\ or\ 1D\ grid}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ GenerateGrid();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ Override\ the\ PrintGrid\ function\ to\ output\ grid\ to\ file}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ PrintGrid(std::string\ outputFileName)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ Getters\ for\ the\ grids}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<double>\&\ GetXGrid()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ xGrid;\ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<double>\&\ GetYGrid()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ yGrid;\ \}}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ RDOMAIN\_H}}
+\DoxyCodeLine{00033\ }
+
+\end{DoxyCode}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: src/Node.cpp File Reference</title>
+<title>CS601: Software Development for Scientific Computing - CS24MT018: src/Node.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">CS601: Software Development for Scientific Computing - CS24MT018
    </div>
+   <div id="projectbrief">Programming Assignment 2 - Software for Computation on Grids</div>
   </td>
  </tr>
  </tbody>
@@ -76,28 +77,43 @@ $(function() {
   <div class="headertitle"><div class="title">Node.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="Node_8h_source.html">Node.h</a>&quot;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
+
+<p>Implementation of the <a class="el" href="classNode.html" title="Represents a node in a finite element mesh.">Node</a> class for representing nodes in the finite element grid.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;cstdio&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;cfloat&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;Node.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Node.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="Node_8cpp__incl.png" border="0" usemap="#asrc_2Node_8cpp" alt=""/></div>
 <map name="asrc_2Node_8cpp" id="asrc_2Node_8cpp">
-<area shape="rect" title=" " alt="" coords="164,5,271,31"/>
-<area shape="rect" href="Node_8h.html" title="This header file defines the Node class, which represents a node in a finite element mesh." alt="" coords="134,79,202,104"/>
-<area shape="poly" title=" " alt="" coords="211,33,186,69,182,66,207,29"/>
-<area shape="rect" title=" " alt="" coords="227,79,307,104"/>
-<area shape="poly" title=" " alt="" coords="228,29,253,66,249,69,223,33"/>
+<area shape="rect" title="Implementation of the Node class for representing nodes in the finite element grid." alt="" coords="157,5,264,31"/>
 <area shape="rect" title=" " alt="" coords="5,152,67,177"/>
-<area shape="poly" title=" " alt="" coords="148,106,71,148,68,143,146,102"/>
+<area shape="poly" title=" " alt="" coords="190,33,155,54,118,81,84,112,56,143,52,139,80,108,114,77,152,50,188,29"/>
 <area shape="rect" title=" " alt="" coords="91,152,154,177"/>
-<area shape="poly" title=" " alt="" coords="163,106,140,142,135,139,158,103"/>
+<area shape="poly" title=" " alt="" coords="186,33,155,52,141,65,130,80,122,109,121,138,116,138,116,108,126,77,137,61,152,48,183,28"/>
 <area shape="rect" title=" " alt="" coords="179,152,248,177"/>
-<area shape="poly" title=" " alt="" coords="178,103,201,139,196,142,173,106"/>
+<area shape="poly" title=" " alt="" coords="216,31,223,79,220,138,215,138,217,79,210,31"/>
+<area shape="rect" title=" " alt="" coords="335,79,393,104"/>
+<area shape="poly" title=" " alt="" coords="236,28,328,70,326,75,234,33"/>
 <area shape="rect" title=" " alt="" coords="273,152,335,177"/>
-<area shape="poly" title=" " alt="" coords="191,102,271,143,269,148,189,106"/>
+<area shape="poly" title=" " alt="" coords="221,30,291,139,287,142,216,33"/>
+<area shape="rect" href="Node_8h_source.html" title=" " alt="" coords="141,79,209,104"/>
+<area shape="poly" title=" " alt="" coords="207,32,189,68,184,65,202,30"/>
+<area shape="poly" title=" " alt="" coords="154,106,72,148,70,143,151,102"/>
+<area shape="poly" title=" " alt="" coords="168,106,141,142,137,139,164,103"/>
+<area shape="poly" title=" " alt="" coords="183,103,203,139,198,141,179,106"/>
+<area shape="poly" title=" " alt="" coords="197,102,272,143,269,147,194,106"/>
 </map>
 </div>
+</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implementation of the <a class="el" href="classNode.html" title="Represents a node in a finite element mesh.">Node</a> class for representing nodes in the finite element grid. </p>
+<p>This file contains methods for managing the properties of nodes, including their positions in the grid and whether they are interior or boundary nodes.</p>
+<p>Acknowledgement: cs294-73 <a href="#" onclick="location.href='mai'+'lto:'+'col'+'el'+'la@'+'ee'+'cs.'+'be'+'rke'+'le'+'y.e'+'du'; return false;">colel<span class="obfuscator">.nosp@m.</span>la@e<span class="obfuscator">.nosp@m.</span>ecs.b<span class="obfuscator">.nosp@m.</span>erke<span class="obfuscator">.nosp@m.</span>ley.e<span class="obfuscator">.nosp@m.</span>du</a> </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

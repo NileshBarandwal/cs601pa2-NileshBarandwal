@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: inc/FEGrid.h Source File</title>
+<title>CS601: Software Development for Scientific Computing - CS24MT018: inc/FEGrid.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">CS601: Software Development for Scientific Computing - CS24MT018
    </div>
+   <div id="projectbrief">Programming Assignment 2 - Software for Computation on Grids</div>
   </td>
  </tr>
  </tbody>
@@ -81,73 +82,63 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">FEGrid.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="FEGrid_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// acknowledgement: cs294-73 colella@eecs.berkeley.edu</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//acknowledgement: cs294-73 colella@eecs.berkeley.edu</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef _FEGRID_H_</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define _FEGRID_H_</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="Node_8h.html">Node.h</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="Element_8h.html">Element.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">using namespace </span>std;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classFEGrid.html">   31</a></span><span class="keyword">class </span><a class="code hl_class" href="classFEGrid.html">FEGrid</a></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <a class="code hl_function" href="classFEGrid.html#a4c1cf84d28305d61abb3f00dd639cfed">FEGrid</a>();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <a class="code hl_function" href="classFEGrid.html#a4c1cf84d28305d61abb3f00dd639cfed">FEGrid</a>(<span class="keyword">const</span> std::string&amp; nodeFile, <span class="keyword">const</span> std::string&amp; a_elementFileName);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classFEGrid.html#a8eced440d19cd67ec08f458e5d383544">gradient</a>(<span class="keywordtype">double</span> a_gradient[<a class="code hl_define" href="Node_8h.html#ac25189db92959bff3c6c2adf4c34b50a">DIM</a>],</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; a_eltNumber,</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; a_localNodeNumber) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="classFEGrid.html#afd14f5039abfdd4b5979b8c719cc44da">elementArea</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; a_eltNumber) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keyword">const</span> <a class="code hl_class" href="classNode.html">Node</a>&amp; <a class="code hl_function" href="classFEGrid.html#a8abc40a61e7f1420d0c01329f9e6cca7">getNode</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; a_eltNumber,</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; a_localNodeNumber) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classFEGrid.html#aeabee5101ea56d322d873962752fdf14">getNumElts</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classFEGrid.html#adfdad3532b639b8ac0911bcdea0cb0f4">getNumNodes</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classFEGrid.html#a45de32051fb410c878017d1ac3af0911">getNumInteriorNodes</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="keyword">const</span> <a class="code hl_class" href="classElement.html">Element</a>&amp; <a class="code hl_function" href="classFEGrid.html#ad62a4c18e20495c4b5689b0ba8b79285">element</a>(<span class="keywordtype">int</span> i) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="keyword">const</span> <a class="code hl_class" href="classNode.html">Node</a>&amp; <a class="code hl_function" href="classFEGrid.html#aa26953a7d6970d8fce738c90510f8f7d">node</a>(<span class="keywordtype">int</span> i) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  vector&lt;Node&gt; m_nodes;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  vector&lt;Element&gt; m_elements;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <span class="keywordtype">int</span> m_numInteriorNodes;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>};</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;cstdio&gt;</span>   </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;cmath&gt;</span>    </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cstring&gt;</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Node.h&quot;</span>   </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;Element.h&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classFEGrid.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="classFEGrid.html">FEGrid</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <a class="code hl_function" href="classFEGrid.html#a4c1cf84d28305d61abb3f00dd639cfed">FEGrid</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_function" href="classFEGrid.html#a4c1cf84d28305d61abb3f00dd639cfed">FEGrid</a>(<span class="keyword">const</span> std::string&amp; nodeFile, <span class="keyword">const</span> std::string&amp; a_elementFileName);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classFEGrid.html#a8eced440d19cd67ec08f458e5d383544">gradient</a>(<span class="keywordtype">double</span> a_gradient[DIM], </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; a_eltNumber,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; a_localNodeNumber) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="classFEGrid.html#afd14f5039abfdd4b5979b8c719cc44da">elementArea</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; a_eltNumber) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keyword">const</span> <a class="code hl_class" href="classNode.html">Node</a>&amp; <a class="code hl_function" href="classFEGrid.html#a8abc40a61e7f1420d0c01329f9e6cca7">getNode</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; a_eltNumber,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; a_localNodeNumber) <span class="keyword">const</span>; </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classFEGrid.html#aeabee5101ea56d322d873962752fdf14">getNumElts</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classFEGrid.html#adfdad3532b639b8ac0911bcdea0cb0f4">getNumNodes</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classFEGrid.html#a45de32051fb410c878017d1ac3af0911">getNumInteriorNodes</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keyword">const</span> <a class="code hl_class" href="classElement.html">Element</a>&amp; <a class="code hl_function" href="classFEGrid.html#ad62a4c18e20495c4b5689b0ba8b79285">element</a>(<span class="keywordtype">int</span> i) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keyword">const</span> <a class="code hl_class" href="classNode.html">Node</a>&amp; <a class="code hl_function" href="classFEGrid.html#aa26953a7d6970d8fce738c90510f8f7d">node</a>(<span class="keywordtype">int</span> i) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="keyword">private</span>:                            </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  vector&lt;Node &gt; m_nodes; </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  vector&lt;Element &gt; m_elements; </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordtype">int</span> m_numInteriorNodes; </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>};</div>
 </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">#endif </span><span class="comment">// _FEGRID_H_</span></div>
-<div class="ttc" id="aElement_8h_html"><div class="ttname"><a href="Element_8h.html">Element.h</a></div><div class="ttdoc">This header file defines the Element class, which represents a finite element in the grid.</div></div>
-<div class="ttc" id="aNode_8h_html"><div class="ttname"><a href="Node_8h.html">Node.h</a></div><div class="ttdoc">This header file defines the Node class, which represents a node in a finite element mesh.</div></div>
-<div class="ttc" id="aNode_8h_html_ac25189db92959bff3c6c2adf4c34b50a"><div class="ttname"><a href="Node_8h.html#ac25189db92959bff3c6c2adf4c34b50a">DIM</a></div><div class="ttdeci">#define DIM</div><div class="ttdef"><b>Definition</b> Node.h:13</div></div>
-<div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdoc">A class to represent a finite element in the grid.</div><div class="ttdef"><b>Definition</b> Element.h:27</div></div>
-<div class="ttc" id="aclassFEGrid_html"><div class="ttname"><a href="classFEGrid.html">FEGrid</a></div><div class="ttdoc">A class that represents a finite element grid consisting of nodes and elements.</div><div class="ttdef"><b>Definition</b> FEGrid.h:32</div></div>
-<div class="ttc" id="aclassFEGrid_html_a45de32051fb410c878017d1ac3af0911"><div class="ttname"><a href="classFEGrid.html#a45de32051fb410c878017d1ac3af0911">FEGrid::getNumInteriorNodes</a></div><div class="ttdeci">int getNumInteriorNodes() const</div><div class="ttdoc">Gets the number of interior nodes in the grid.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:102</div></div>
-<div class="ttc" id="aclassFEGrid_html_a4c1cf84d28305d61abb3f00dd639cfed"><div class="ttname"><a href="classFEGrid.html#a4c1cf84d28305d61abb3f00dd639cfed">FEGrid::FEGrid</a></div><div class="ttdeci">FEGrid()</div><div class="ttdoc">Default constructor to initialize an empty FEGrid object.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:13</div></div>
-<div class="ttc" id="aclassFEGrid_html_a8abc40a61e7f1420d0c01329f9e6cca7"><div class="ttname"><a href="classFEGrid.html#a8abc40a61e7f1420d0c01329f9e6cca7">FEGrid::getNode</a></div><div class="ttdeci">const Node &amp; getNode(const int &amp;a_eltNumber, const int &amp;a_localNodeNumber) const</div><div class="ttdoc">Gets the node at a specific element and local node index.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:70</div></div>
-<div class="ttc" id="aclassFEGrid_html_a8eced440d19cd67ec08f458e5d383544"><div class="ttname"><a href="classFEGrid.html#a8eced440d19cd67ec08f458e5d383544">FEGrid::gradient</a></div><div class="ttdeci">void gradient(double a_gradient[DIM], const int &amp;a_eltNumber, const int &amp;a_localNodeNumber) const</div><div class="ttdoc">Calculates the gradient at a specific element and node.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:44</div></div>
-<div class="ttc" id="aclassFEGrid_html_aa26953a7d6970d8fce738c90510f8f7d"><div class="ttname"><a href="classFEGrid.html#aa26953a7d6970d8fce738c90510f8f7d">FEGrid::node</a></div><div class="ttdeci">const Node &amp; node(int i) const</div><div class="ttdoc">Gets the node at a specific index.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:124</div></div>
-<div class="ttc" id="aclassFEGrid_html_ad62a4c18e20495c4b5689b0ba8b79285"><div class="ttname"><a href="classFEGrid.html#ad62a4c18e20495c4b5689b0ba8b79285">FEGrid::element</a></div><div class="ttdeci">const Element &amp; element(int i) const</div><div class="ttdoc">Gets the element at a specific index.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:113</div></div>
-<div class="ttc" id="aclassFEGrid_html_adfdad3532b639b8ac0911bcdea0cb0f4"><div class="ttname"><a href="classFEGrid.html#adfdad3532b639b8ac0911bcdea0cb0f4">FEGrid::getNumNodes</a></div><div class="ttdeci">int getNumNodes() const</div><div class="ttdoc">Gets the total number of nodes in the grid.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:92</div></div>
-<div class="ttc" id="aclassFEGrid_html_aeabee5101ea56d322d873962752fdf14"><div class="ttname"><a href="classFEGrid.html#aeabee5101ea56d322d873962752fdf14">FEGrid::getNumElts</a></div><div class="ttdeci">int getNumElts() const</div><div class="ttdoc">Gets the total number of elements in the grid.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:82</div></div>
-<div class="ttc" id="aclassFEGrid_html_afd14f5039abfdd4b5979b8c719cc44da"><div class="ttname"><a href="classFEGrid.html#afd14f5039abfdd4b5979b8c719cc44da">FEGrid::elementArea</a></div><div class="ttdeci">double elementArea(const int &amp;a_eltNumber) const</div><div class="ttdoc">Calculates the area of a specific element.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:57</div></div>
-<div class="ttc" id="aclassNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdoc">A class that represents a node in a finite element mesh.</div><div class="ttdef"><b>Definition</b> Node.h:29</div></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdoc">Represents an element in a finite element mesh.</div><div class="ttdef"><b>Definition</b> Element.h:14</div></div>
+<div class="ttc" id="aclassFEGrid_html"><div class="ttname"><a href="classFEGrid.html">FEGrid</a></div><div class="ttdoc">Represents a finite element grid.</div><div class="ttdef"><b>Definition</b> FEGrid.h:26</div></div>
+<div class="ttc" id="aclassFEGrid_html_a45de32051fb410c878017d1ac3af0911"><div class="ttname"><a href="classFEGrid.html#a45de32051fb410c878017d1ac3af0911">FEGrid::getNumInteriorNodes</a></div><div class="ttdeci">int getNumInteriorNodes() const</div><div class="ttdoc">Gets the number of interior nodes in the grid.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:203</div></div>
+<div class="ttc" id="aclassFEGrid_html_a4c1cf84d28305d61abb3f00dd639cfed"><div class="ttname"><a href="classFEGrid.html#a4c1cf84d28305d61abb3f00dd639cfed">FEGrid::FEGrid</a></div><div class="ttdeci">FEGrid()</div><div class="ttdoc">Default constructor for the FEGrid class.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:30</div></div>
+<div class="ttc" id="aclassFEGrid_html_a8abc40a61e7f1420d0c01329f9e6cca7"><div class="ttname"><a href="classFEGrid.html#a8abc40a61e7f1420d0c01329f9e6cca7">FEGrid::getNode</a></div><div class="ttdeci">const Node &amp; getNode(const int &amp;a_eltNumber, const int &amp;a_localNodeNumber) const</div><div class="ttdoc">Retrieves a node of an element by element and local node number.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:167</div></div>
+<div class="ttc" id="aclassFEGrid_html_a8eced440d19cd67ec08f458e5d383544"><div class="ttname"><a href="classFEGrid.html#a8eced440d19cd67ec08f458e5d383544">FEGrid::gradient</a></div><div class="ttdeci">void gradient(double a_gradient[DIM], const int &amp;a_eltNumber, const int &amp;a_localNodeNumber) const</div><div class="ttdoc">Computes the gradient of a shape function for an element at a specified local node.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:100</div></div>
+<div class="ttc" id="aclassFEGrid_html_aa26953a7d6970d8fce738c90510f8f7d"><div class="ttname"><a href="classFEGrid.html#aa26953a7d6970d8fce738c90510f8f7d">FEGrid::node</a></div><div class="ttdeci">const Node &amp; node(int i) const</div><div class="ttdoc">Accessor for a specified node by index.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:229</div></div>
+<div class="ttc" id="aclassFEGrid_html_ad62a4c18e20495c4b5689b0ba8b79285"><div class="ttname"><a href="classFEGrid.html#ad62a4c18e20495c4b5689b0ba8b79285">FEGrid::element</a></div><div class="ttdeci">const Element &amp; element(int i) const</div><div class="ttdoc">Accessor for a specified element by index.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:216</div></div>
+<div class="ttc" id="aclassFEGrid_html_adfdad3532b639b8ac0911bcdea0cb0f4"><div class="ttname"><a href="classFEGrid.html#adfdad3532b639b8ac0911bcdea0cb0f4">FEGrid::getNumNodes</a></div><div class="ttdeci">int getNumNodes() const</div><div class="ttdoc">Gets the total number of nodes in the grid.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:191</div></div>
+<div class="ttc" id="aclassFEGrid_html_aeabee5101ea56d322d873962752fdf14"><div class="ttname"><a href="classFEGrid.html#aeabee5101ea56d322d873962752fdf14">FEGrid::getNumElts</a></div><div class="ttdeci">int getNumElts() const</div><div class="ttdoc">Gets the total number of elements in the grid.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:179</div></div>
+<div class="ttc" id="aclassFEGrid_html_afd14f5039abfdd4b5979b8c719cc44da"><div class="ttname"><a href="classFEGrid.html#afd14f5039abfdd4b5979b8c719cc44da">FEGrid::elementArea</a></div><div class="ttdeci">double elementArea(const int &amp;a_eltNumber) const</div><div class="ttdoc">Calculates the area of a specified element.</div><div class="ttdef"><b>Definition</b> FEGrid.cpp:136</div></div>
+<div class="ttc" id="aclassNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdoc">Represents a node in a finite element mesh.</div><div class="ttdef"><b>Definition</b> Node.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

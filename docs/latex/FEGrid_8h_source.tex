@@ -1,0 +1,49 @@
+\doxysection{FEGrid.\+h}
+\hypertarget{FEGrid_8h_source}{}\label{FEGrid_8h_source}\index{inc/FEGrid.h@{inc/FEGrid.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//acknowledgement:\ cs294-\/73\ colella@eecs.berkeley.edu}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ \_FEGRID\_H\_}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ \_FEGRID\_H\_}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdio>}\ \ \ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cmath>}\ \ \ \ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cstring>}\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Node.h"{}}\ \ \ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Element.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFEGrid}{FEGrid}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{classFEGrid_a4c1cf84d28305d61abb3f00dd639cfed}{FEGrid}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \mbox{\hyperlink{classFEGrid_a4c1cf84d28305d61abb3f00dd639cfed}{FEGrid}}(\textcolor{keyword}{const}\ std::string\&\ nodeFile,\ \textcolor{keyword}{const}\ std::string\&\ a\_elementFileName);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFEGrid_a8eced440d19cd67ec08f458e5d383544}{gradient}}(\textcolor{keywordtype}{double}\ a\_gradient[DIM],\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ a\_eltNumber,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ a\_localNodeNumber)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFEGrid_afd14f5039abfdd4b5979b8c719cc44da}{elementArea}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ a\_eltNumber)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classNode}{Node}}\&\ \mbox{\hyperlink{classFEGrid_a8abc40a61e7f1420d0c01329f9e6cca7}{getNode}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ a\_eltNumber,}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ a\_localNodeNumber)\ \textcolor{keyword}{const};\ }
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFEGrid_aeabee5101ea56d322d873962752fdf14}{getNumElts}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFEGrid_adfdad3532b639b8ac0911bcdea0cb0f4}{getNumNodes}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFEGrid_a45de32051fb410c878017d1ac3af0911}{getNumInteriorNodes}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00083\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classElement}{Element}}\&\ \mbox{\hyperlink{classFEGrid_ad62a4c18e20495c4b5689b0ba8b79285}{element}}(\textcolor{keywordtype}{int}\ i)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classNode}{Node}}\&\ \mbox{\hyperlink{classFEGrid_aa26953a7d6970d8fce738c90510f8f7d}{node}}(\textcolor{keywordtype}{int}\ i)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \textcolor{keyword}{private}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ vector<Node\ >\ m\_nodes;\ }
+\DoxyCodeLine{00093\ \ \ vector<Element\ >\ m\_elements;\ }
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{int}\ m\_numInteriorNodes;\ }
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

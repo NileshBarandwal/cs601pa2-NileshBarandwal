@@ -1,0 +1,108 @@
+\doxysection{src/\+FEMain.cpp File Reference}
+\hypertarget{FEMain_8cpp}{}\label{FEMain_8cpp}\index{src/FEMain.cpp@{src/FEMain.cpp}}
+
+
+Main program for finite element analysis using a grid of nodes and elements.  
+
+
+{\ttfamily \#include "{}FEGrid.\+h"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$cblas.\+h$>$}\newline
+Include dependency graph for FEMain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{FEMain_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{FEMain_8cpp_a97d832ae23af4f215e801e37e4f94254}\label{FEMain_8cpp_a97d832ae23af4f215e801e37e4f94254} 
+\#define {\bfseries K}~30
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{FEMain_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\begin{DoxyCompactList}\small\item\em Main function to perform finite element calculations and output results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main program for finite element analysis using a grid of nodes and elements. 
+
+This program reads in node and element data, computes the stiffness matrix, and outputs results in various formats. It includes responses to assignment questions regarding optimization, matrix structure, and bandwidth.\hypertarget{FEMain_8cpp_Description}{}\doxysubsection{\texorpdfstring{Description}{Description}}\label{FEMain_8cpp_Description}
+The program\+:
+\begin{DoxyItemize}
+\item Reads node and element data from files with extensions .node and .elem, based on the provided prefix.
+\item Builds the global stiffness matrix based on finite element analysis.
+\item Optimizes matrix multiplication using CBLAS (if available).
+\item Dumps matrix data to binary files for debugging.
+\item Computes the lower and upper bandwidths of the global stiffness matrix.
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Nilesh.\+R.\+Barandwal 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16-\/11-\/2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{FEMain_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{FEMain_8cpp_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{FEMain.cpp@{FEMain.cpp}!main@{main}}
+\index{main@{main}!FEMain.cpp@{FEMain.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+
+
+Main function to perform finite element calculations and output results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Argument count (should be 2 for node and element file inputs). \\
+\hline
+{\em argv} & Argument values (expects a file prefix as the argument). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Status code (0 for success, 1 for error).
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The input files should have the {\ttfamily .node} and {\ttfamily .elem} extensions based on the provided prefix. 
+\end{DoxyNote}
+Poisson operator over the grid elements to compute element matrices.
+
+This loop iterates over all grid elements, computes the stiffness matrix for each element, and assembles the global stiffness matrix.
+
+Q1. Use CBLAS to perform matrix multiplication for B\texorpdfstring{$^\wedge$}{\string^}T \texorpdfstring{$\ast$}{*} C. Replaces lines 70-\/76 by calling the CBLAS function {\ttfamily cblas\+\_\+dgemm} to compute {\ttfamily kijpartial = B\texorpdfstring{$^\wedge$}{\string^}T \texorpdfstring{$\ast$}{*} C}.
+
+This single line performs the matrix multiplication for {\ttfamily B\texorpdfstring{$^\wedge$}{\string^}T \texorpdfstring{$\ast$}{*} C} efficiently using the CBLAS library to optimize performance.
+
+Q2\+: Dump kijpartial matrix data to a binary file named "{}kijdump.\+bin"{}.
+
+This routine writes the kijpartial matrix in binary format for debugging purposes.
+
+Q3\+: Determine the structure of the global matrix {\ttfamily globalK}.
+
+The structure of the global stiffness matrix {\ttfamily globalK} is assessed based on the pattern of non-\/zero elements.
+\begin{DoxyItemize}
+\item Options\+: 1) Tridiagonal 2) Diagonal 3) Bi\+Diagonal 4) Banded 5) Upper Hessenberg 6) Lower Hessenberg
+\end{DoxyItemize}
+
+Q4\+: Compute the lower and upper bandwidth of the matrix {\ttfamily globalK}.
+
+
+\begin{DoxyItemize}
+\item Part A\+: Lower Bandwidth
+\item Part B\+: Upper Bandwidth
+\end{DoxyItemize}

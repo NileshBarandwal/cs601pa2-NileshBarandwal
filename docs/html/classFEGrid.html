@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: FEGrid Class Reference</title>
+<title>CS601: Software Development for Scientific Computing - CS24MT018: FEGrid Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">CS601: Software Development for Scientific Computing - CS24MT018
    </div>
+   <div id="projectbrief">Programming Assignment 2 - Software for Computation on Grids</div>
   </td>
  </tr>
  </tbody>
@@ -76,7 +77,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A class that represents a finite element grid consisting of nodes and elements.  
+<p>Represents a finite element grid.  
  <a href="classFEGrid.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="FEGrid_8h_source.html">FEGrid.h</a>&gt;</code></p>
@@ -84,19 +85,19 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c1cf84d28305d61abb3f00dd639cfed" id="r_a4c1cf84d28305d61abb3f00dd639cfed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFEGrid.html#a4c1cf84d28305d61abb3f00dd639cfed">FEGrid</a> ()</td></tr>
-<tr class="memdesc:a4c1cf84d28305d61abb3f00dd639cfed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor to initialize an empty <a class="el" href="classFEGrid.html" title="A class that represents a finite element grid consisting of nodes and elements.">FEGrid</a> object.  <br /></td></tr>
+<tr class="memdesc:a4c1cf84d28305d61abb3f00dd639cfed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the <a class="el" href="classFEGrid.html" title="Represents a finite element grid.">FEGrid</a> class.  <br /></td></tr>
 <tr class="separator:a4c1cf84d28305d61abb3f00dd639cfed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a990a21298505f204a9a0765a2918520f" id="r_a990a21298505f204a9a0765a2918520f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFEGrid.html#a990a21298505f204a9a0765a2918520f">FEGrid</a> (const std::string &amp;nodeFile, const std::string &amp;a_elementFileName)</td></tr>
-<tr class="memdesc:a990a21298505f204a9a0765a2918520f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that initializes the <a class="el" href="classFEGrid.html" title="A class that represents a finite element grid consisting of nodes and elements.">FEGrid</a> object with nodes and elements from files.  <br /></td></tr>
+<tr class="memdesc:a990a21298505f204a9a0765a2918520f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that initializes the grid with node and element data files.  <br /></td></tr>
 <tr class="separator:a990a21298505f204a9a0765a2918520f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eced440d19cd67ec08f458e5d383544" id="r_a8eced440d19cd67ec08f458e5d383544"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFEGrid.html#a8eced440d19cd67ec08f458e5d383544">gradient</a> (double a_gradient[<a class="el" href="Node_8h.html#ac25189db92959bff3c6c2adf4c34b50a">DIM</a>], const int &amp;a_eltNumber, const int &amp;a_localNodeNumber) const</td></tr>
-<tr class="memdesc:a8eced440d19cd67ec08f458e5d383544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the gradient at a specific element and node.  <br /></td></tr>
+<tr class="memitem:a8eced440d19cd67ec08f458e5d383544" id="r_a8eced440d19cd67ec08f458e5d383544"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFEGrid.html#a8eced440d19cd67ec08f458e5d383544">gradient</a> (double a_gradient[DIM], const int &amp;a_eltNumber, const int &amp;a_localNodeNumber) const</td></tr>
+<tr class="memdesc:a8eced440d19cd67ec08f458e5d383544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the gradient of a shape function for an element at a specified local node.  <br /></td></tr>
 <tr class="separator:a8eced440d19cd67ec08f458e5d383544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd14f5039abfdd4b5979b8c719cc44da" id="r_afd14f5039abfdd4b5979b8c719cc44da"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFEGrid.html#afd14f5039abfdd4b5979b8c719cc44da">elementArea</a> (const int &amp;a_eltNumber) const</td></tr>
-<tr class="memdesc:afd14f5039abfdd4b5979b8c719cc44da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the area of a specific element.  <br /></td></tr>
+<tr class="memdesc:afd14f5039abfdd4b5979b8c719cc44da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the area of a specified element.  <br /></td></tr>
 <tr class="separator:afd14f5039abfdd4b5979b8c719cc44da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8abc40a61e7f1420d0c01329f9e6cca7" id="r_a8abc40a61e7f1420d0c01329f9e6cca7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classNode.html">Node</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFEGrid.html#a8abc40a61e7f1420d0c01329f9e6cca7">getNode</a> (const int &amp;a_eltNumber, const int &amp;a_localNodeNumber) const</td></tr>
-<tr class="memdesc:a8abc40a61e7f1420d0c01329f9e6cca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the node at a specific element and local node index.  <br /></td></tr>
+<tr class="memdesc:a8abc40a61e7f1420d0c01329f9e6cca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a node of an element by element and local node number.  <br /></td></tr>
 <tr class="separator:a8abc40a61e7f1420d0c01329f9e6cca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeabee5101ea56d322d873962752fdf14" id="r_aeabee5101ea56d322d873962752fdf14"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFEGrid.html#aeabee5101ea56d322d873962752fdf14">getNumElts</a> () const</td></tr>
 <tr class="memdesc:aeabee5101ea56d322d873962752fdf14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the total number of elements in the grid.  <br /></td></tr>
@@ -108,15 +109,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a45de32051fb410c878017d1ac3af0911"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of interior nodes in the grid.  <br /></td></tr>
 <tr class="separator:a45de32051fb410c878017d1ac3af0911"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad62a4c18e20495c4b5689b0ba8b79285" id="r_ad62a4c18e20495c4b5689b0ba8b79285"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classElement.html">Element</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFEGrid.html#ad62a4c18e20495c4b5689b0ba8b79285">element</a> (int i) const</td></tr>
-<tr class="memdesc:ad62a4c18e20495c4b5689b0ba8b79285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the element at a specific index.  <br /></td></tr>
+<tr class="memdesc:ad62a4c18e20495c4b5689b0ba8b79285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor for a specified element by index.  <br /></td></tr>
 <tr class="separator:ad62a4c18e20495c4b5689b0ba8b79285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa26953a7d6970d8fce738c90510f8f7d" id="r_aa26953a7d6970d8fce738c90510f8f7d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classNode.html">Node</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFEGrid.html#aa26953a7d6970d8fce738c90510f8f7d">node</a> (int i) const</td></tr>
-<tr class="memdesc:aa26953a7d6970d8fce738c90510f8f7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the node at a specific index.  <br /></td></tr>
+<tr class="memdesc:aa26953a7d6970d8fce738c90510f8f7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor for a specified node by index.  <br /></td></tr>
 <tr class="separator:aa26953a7d6970d8fce738c90510f8f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class that represents a finite element grid consisting of nodes and elements. </p>
-<p>This class manages the grid by storing a collection of nodes and elements. It provides methods for calculating element gradients, computing areas, and accessing grid data. </p>
+<div class="textblock"><p>Represents a finite element grid. </p>
+<p>This class handles the structure of the grid, including nodes and elements, and provides methods for calculations over elements, such as area and gradient computations. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4c1cf84d28305d61abb3f00dd639cfed" name="a4c1cf84d28305d61abb3f00dd639cfed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c1cf84d28305d61abb3f00dd639cfed">&#9670;&#160;</a></span>FEGrid() <span class="overload">[1/2]</span></h2>
@@ -133,10 +134,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Default constructor to initialize an empty <a class="el" href="classFEGrid.html" title="A class that represents a finite element grid consisting of nodes and elements.">FEGrid</a> object. </p>
-<p>Default constructor for the <a class="el" href="classFEGrid.html" title="A class that represents a finite element grid consisting of nodes and elements.">FEGrid</a> class.</p>
-<p>This constructor sets up an empty grid with no nodes or elements.</p>
-<p>Initializes an empty <a class="el" href="classFEGrid.html" title="A class that represents a finite element grid consisting of nodes and elements.">FEGrid</a> object with no nodes or elements. This constructor is typically used when initializing the grid before loading node and element data from files. </p>
+<p>Default constructor for the <a class="el" href="classFEGrid.html" title="Represents a finite element grid.">FEGrid</a> class. </p>
+<p>Initializes an empty grid with zero interior nodes. </p>
 
 </div>
 </div>
@@ -150,7 +149,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">FEGrid::FEGrid </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>nodeFile</em>, </td>
+          <td class="paramname"><em>a_nodeFileName</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -166,24 +165,23 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor that initializes the <a class="el" href="classFEGrid.html" title="A class that represents a finite element grid consisting of nodes and elements.">FEGrid</a> object with nodes and elements from files. </p>
-<p>Constructor to initialize the <a class="el" href="classFEGrid.html" title="A class that represents a finite element grid consisting of nodes and elements.">FEGrid</a> object with node and element data from files.</p>
+<p>Constructor that initializes the grid with node and element data files. </p>
+<p>Constructor for the <a class="el" href="classFEGrid.html" title="Represents a finite element grid.">FEGrid</a> class that initializes the grid using node and element files.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nodeFile</td><td>The name of the file containing node data. </td></tr>
-    <tr><td class="paramname">a_elementFileName</td><td>The name of the file containing element data.</td></tr>
+    <tr><td class="paramname">nodeFile</td><td>Filename of the node data file. </td></tr>
+    <tr><td class="paramname">a_elementFileName</td><td>Filename of the element data file.</td></tr>
   </table>
   </dd>
 </dl>
-<p>This constructor initializes the grid by reading node and element information from the specified files.</p>
+<p>This constructor reads the node and element data from the specified files and initializes the grid's nodes and elements. It also counts the number of interior nodes.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nodeFile</td><td>The name of the file containing node data. </td></tr>
-    <tr><td class="paramname">a_elementFileName</td><td>The name of the file containing element data.</td></tr>
+    <tr><td class="paramname">a_nodeFileName</td><td>The name of the file containing the node data. </td></tr>
+    <tr><td class="paramname">a_elementFileName</td><td>The name of the file containing the element data. </td></tr>
   </table>
   </dd>
 </dl>
-<p>This constructor reads node and element information from the specified files and initializes the grid. </p>
 
 </div>
 </div>
@@ -204,22 +202,23 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the element at a specific index. </p>
+<p>Accessor for a specified element by index. </p>
+<p>Retrieves an element from the grid by its index.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Index of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the requested <a class="el" href="classElement.html" title="Represents an element in a finite element mesh.">Element</a>.</dd></dl>
+<p>This function returns a reference to the element at the specified index.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>The index of the element. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to the element at the specified index.</dd></dl>
-<p>The index is zero-based, so the first element has index 0.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">i</td><td>The index of the element. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to the element at the specified index. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>const <a class="el" href="classElement.html" title="Represents an element in a finite element mesh.">Element</a>&amp; The element at the specified index. </dd></dl>
 
 </div>
 </div>
@@ -239,22 +238,23 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calculates the area of a specific element. </p>
+<p>Calculates the area of a specified element. </p>
+<p>Calculates the area of an element.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a_eltNumber</td><td>The index of the element for which the area is to be calculated. </td></tr>
+    <tr><td class="paramname">a_eltNumber</td><td><a class="el" href="classElement.html" title="Represents an element in a finite element mesh.">Element</a> number. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The area of the specified element, in square units.</dd></dl>
-<p>This method computes and returns the area of the given element based on its vertices' coordinates.</p>
+<dl class="section return"><dt>Returns</dt><dd>The area of the element.</dd></dl>
+<p>This function calculates the area of a triangular element in 2D using the node positions.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a_eltNumber</td><td>The index of the element for which the area is to be calculated. </td></tr>
+    <tr><td class="paramname">a_eltNumber</td><td>The element number for which the area is calculated. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The area of the specified element. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>double The area of the element. </dd></dl>
 
 </div>
 </div>
@@ -284,24 +284,25 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the node at a specific element and local node index. </p>
+<p>Retrieves a node of an element by element and local node number. </p>
+<p>Gets a node from a specific element by local node number.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a_eltNumber</td><td>The element index. </td></tr>
-    <tr><td class="paramname">a_localNodeNumber</td><td>The local node index within the element. </td></tr>
+    <tr><td class="paramname">a_eltNumber</td><td><a class="el" href="classElement.html" title="Represents an element in a finite element mesh.">Element</a> number. </td></tr>
+    <tr><td class="paramname">a_localNodeNumber</td><td>Local node number within the element. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to the node at the specified location.</dd></dl>
-<p>This method retrieves the node from the grid at the specified element and local node index. The indices are zero-based, meaning the first node in the element has index 0.</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the requested <a class="el" href="classNode.html" title="Represents a node in a finite element mesh.">Node</a>.</dd></dl>
+<p>This function retrieves a node from a given element using its local node number.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a_eltNumber</td><td>The index of the element. </td></tr>
-    <tr><td class="paramname">a_localNodeNumber</td><td>The index of the local node within the element (0-2). </td></tr>
+    <tr><td class="paramname">a_eltNumber</td><td>The element number. </td></tr>
+    <tr><td class="paramname">a_localNodeNumber</td><td>The local node number within the element. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to the node at the specified index. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>const <a class="el" href="classNode.html" title="Represents a node in a finite element mesh.">Node</a>&amp; The node corresponding to the local node number in the specified element. </dd></dl>
 
 </div>
 </div>
@@ -321,7 +322,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the total number of elements in the grid. </p>
-<dl class="section return"><dt>Returns</dt><dd>The total number of elements in the grid. </dd></dl>
+<p>Gets the number of elements in the grid.</p>
+<dl class="section return"><dt>Returns</dt><dd>Number of elements.</dd></dl>
+<p>This function returns the total number of elements in the grid.</p>
+<dl class="section return"><dt>Returns</dt><dd>int The number of elements. </dd></dl>
 
 </div>
 </div>
@@ -341,7 +345,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the number of interior nodes in the grid. </p>
-<dl class="section return"><dt>Returns</dt><dd>The number of interior nodes in the grid. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of interior nodes.</dd></dl>
+<p>This function returns the total number of interior nodes in the grid (not on the boundary).</p>
+<dl class="section return"><dt>Returns</dt><dd>int The number of interior nodes. </dd></dl>
 
 </div>
 </div>
@@ -361,7 +367,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the total number of nodes in the grid. </p>
-<dl class="section return"><dt>Returns</dt><dd>The total number of nodes in the grid. </dd></dl>
+<p>Gets the number of nodes in the grid.</p>
+<dl class="section return"><dt>Returns</dt><dd>Number of nodes.</dd></dl>
+<p>This function returns the total number of nodes in the grid.</p>
+<dl class="section return"><dt>Returns</dt><dd>int The number of nodes. </dd></dl>
 
 </div>
 </div>
@@ -387,7 +396,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int &amp;&#160;</td>
-          <td class="paramname"><em>a_localNodeNumber</em>&#160;</td>
+          <td class="paramname"><em>a_nodeNumber</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -397,21 +406,22 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calculates the gradient at a specific element and node. </p>
+<p>Computes the gradient of a shape function for an element at a specified local node. </p>
+<p>Calculates the gradient of shape functions (N1, N2, N3) for a given element.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a_gradient</td><td>An array to store the calculated gradient vector. </td></tr>
-    <tr><td class="paramname">a_eltNumber</td><td>The index of the element for which the gradient is to be calculated. </td></tr>
-    <tr><td class="paramname">a_localNodeNumber</td><td>The local node index within the element.</td></tr>
+    <tr><td class="paramname">a_gradient</td><td>Array to store the computed gradient. </td></tr>
+    <tr><td class="paramname">a_eltNumber</td><td><a class="el" href="classElement.html" title="Represents an element in a finite element mesh.">Element</a> number. </td></tr>
+    <tr><td class="paramname">a_localNodeNumber</td><td>Local node number within the element.</td></tr>
   </table>
   </dd>
 </dl>
-<p>This method calculates the gradient at the specified node within the given element and stores the result in a_gradient. The gradient is computed based on the element's shape functions and geometry.</p>
+<p>This function computes the gradient of the shape functions for a triangular element in 2D. It calculates the gradient based on the positions of the element's nodes.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a_gradient</td><td>An array to store the calculated gradient vector. The array must be pre-allocated with space for <code>DIM</code> elements. </td></tr>
-    <tr><td class="paramname">a_eltNumber</td><td>The index of the element for which the gradient is to be calculated. </td></tr>
-    <tr><td class="paramname">a_localNodeNumber</td><td>The local node index within the element (0-2). </td></tr>
+    <tr><td class="paramname">a_gradient</td><td>The output array that will store the gradient of the shape functions. </td></tr>
+    <tr><td class="paramname">a_eltNumber</td><td>The element number for which the gradient is computed. </td></tr>
+    <tr><td class="paramname">a_nodeNumber</td><td>The local node number within the element for which the gradient is calculated. </td></tr>
   </table>
   </dd>
 </dl>
@@ -434,22 +444,23 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the node at a specific index. </p>
+<p>Accessor for a specified node by index. </p>
+<p>Retrieves a node from the grid by its index.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Index of the node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the requested <a class="el" href="classNode.html" title="Represents a node in a finite element mesh.">Node</a>.</dd></dl>
+<p>This function returns a reference to the node at the specified index.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>The index of the node. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to the node at the specified index.</dd></dl>
-<p>The index is zero-based, so the first node has index 0.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">i</td><td>The index of the node. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to the node at the specified index. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>const <a class="el" href="classNode.html" title="Represents a node in a finite element mesh.">Node</a>&amp; The node at the specified index. </dd></dl>
 
 </div>
 </div>

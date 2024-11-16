@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: src/FEMain.cpp File Reference</title>
+<title>CS601: Software Development for Scientific Computing - CS24MT018: src/FEMain.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">CS601: Software Development for Scientific Computing - CS24MT018
    </div>
+   <div id="projectbrief">Programming Assignment 2 - Software for Computation on Grids</div>
   </td>
  </tr>
  </tbody>
@@ -74,59 +75,95 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">FEMain.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="FEGrid_8h_source.html">FEGrid.h</a>&quot;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
+
+<p>Main program for finite element analysis using a grid of nodes and elements.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;FEGrid.h&quot;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;cblas.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for FEMain.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="FEMain_8cpp__incl.png" border="0" usemap="#asrc_2FEMain_8cpp" alt=""/></div>
 <map name="asrc_2FEMain_8cpp" id="asrc_2FEMain_8cpp">
-<area shape="rect" title=" " alt="" coords="426,5,546,31"/>
-<area shape="rect" href="FEGrid_8h.html" title="This header file defines the FEGrid class, which represents the finite element grid." alt="" coords="277,79,354,104"/>
-<area shape="poly" title=" " alt="" coords="460,33,357,76,355,71,458,28"/>
-<area shape="rect" title=" " alt="" coords="475,152,534,177"/>
-<area shape="poly" title=" " alt="" coords="484,32,475,64,473,84,475,103,491,139,486,141,470,105,468,84,470,64,479,30"/>
-<area shape="rect" title=" " alt="" coords="485,79,565,104"/>
-<area shape="poly" title=" " alt="" coords="495,30,514,65,510,68,490,32"/>
-<area shape="rect" title=" " alt="" coords="589,79,663,104"/>
-<area shape="poly" title=" " alt="" coords="510,28,592,70,590,75,507,33"/>
-<area shape="rect" title=" " alt="" coords="169,225,230,251"/>
-<area shape="poly" title=" " alt="" coords="277,99,221,106,158,117,102,133,81,143,68,154,62,166,63,176,70,187,83,196,117,213,156,224,155,230,116,218,80,201,67,190,58,178,57,165,64,150,78,138,100,128,156,112,220,100,276,94"/>
-<area shape="rect" title=" " alt="" coords="292,225,355,251"/>
-<area shape="poly" title=" " alt="" coords="330,103,348,124,363,151,365,169,362,186,345,216,341,213,357,184,360,168,358,153,344,127,326,106"/>
-<area shape="rect" title=" " alt="" coords="395,225,465,251"/>
-<area shape="poly" title=" " alt="" coords="332,102,357,123,383,150,404,182,421,212,416,214,400,184,379,154,353,127,329,106"/>
-<area shape="rect" title=" " alt="" coords="78,152,145,177"/>
-<area shape="poly" title=" " alt="" coords="283,107,158,150,156,145,282,102"/>
+<area shape="rect" title="Main program for finite element analysis using a grid of nodes and elements." alt="" coords="609,5,729,31"/>
+<area shape="rect" href="FEGrid_8h_source.html" title=" " alt="" coords="305,79,382,104"/>
+<area shape="poly" title=" " alt="" coords="617,33,396,81,395,76,616,28"/>
+<area shape="rect" title=" " alt="" coords="312,225,375,251"/>
+<area shape="poly" title=" " alt="" coords="669,32,662,62,648,102,626,144,594,179,557,197,503,213,389,233,388,228,502,207,556,192,591,175,622,141,643,99,657,60,664,30"/>
+<area shape="rect" title=" " alt="" coords="450,225,519,251"/>
+<area shape="poly" title=" " alt="" coords="672,31,673,60,670,99,660,141,639,179,616,200,589,215,534,233,532,228,587,210,613,195,635,176,655,139,665,98,668,60,667,31"/>
 <area shape="rect" title=" " alt="" coords="5,225,68,251"/>
-<area shape="poly" title=" " alt="" coords="277,99,153,118,93,134,71,143,56,154,47,166,41,181,38,212,32,211,36,180,42,164,52,150,68,139,92,129,152,112,276,94"/>
-<area shape="poly" title=" " alt="" coords="347,102,463,145,461,150,345,107"/>
-<area shape="rect" href="Node_8h.html" title="This header file defines the Node class, which represents a node in a finite element mesh." alt="" coords="281,152,349,177"/>
-<area shape="poly" title=" " alt="" coords="318,104,318,138,313,138,313,104"/>
-<area shape="rect" href="Element_8h.html" title="This header file defines the Element class, which represents a finite element in the grid." alt="" coords="169,152,257,177"/>
-<area shape="poly" title=" " alt="" coords="300,106,242,146,239,142,297,102"/>
-<area shape="poly" title=" " alt="" coords="298,180,231,220,229,216,295,175"/>
-<area shape="poly" title=" " alt="" coords="319,177,323,212,318,212,314,178"/>
-<area shape="poly" title=" " alt="" coords="335,175,401,216,398,220,332,180"/>
-<area shape="poly" title=" " alt="" coords="282,177,82,228,80,223,281,172"/>
+<area shape="poly" title=" " alt="" coords="608,25,470,37,298,60,215,77,141,98,82,124,60,138,44,154,37,167,33,181,34,212,29,212,28,181,32,165,40,150,57,134,79,119,139,93,214,72,297,55,469,32,608,20"/>
+<area shape="rect" title=" " alt="" coords="522,152,581,177"/>
+<area shape="poly" title=" " alt="" coords="654,33,628,54,601,80,580,111,564,141,560,138,576,108,597,77,624,50,651,29"/>
+<area shape="rect" title=" " alt="" coords="706,79,786,104"/>
+<area shape="poly" title=" " alt="" coords="683,29,725,67,721,71,679,33"/>
+<area shape="rect" title=" " alt="" coords="810,79,885,104"/>
+<area shape="poly" title=" " alt="" coords="698,28,807,71,805,76,696,33"/>
+<area shape="rect" title=" " alt="" coords="909,79,983,104"/>
+<area shape="poly" title=" " alt="" coords="714,28,897,75,895,80,713,33"/>
+<area shape="rect" title=" " alt="" coords="1007,79,1075,104"/>
+<area shape="poly" title=" " alt="" coords="730,26,994,76,993,81,729,32"/>
+<area shape="rect" title=" " alt="" coords="197,225,258,251"/>
+<area shape="poly" title=" " alt="" coords="306,103,262,121,242,135,227,153,221,167,219,182,222,212,217,212,214,182,216,166,222,151,239,131,259,117,303,98"/>
+<area shape="poly" title=" " alt="" coords="346,104,346,212,341,212,341,104"/>
+<area shape="poly" title=" " alt="" coords="383,101,424,120,444,134,461,150,478,180,485,211,480,212,473,182,457,154,441,138,422,125,381,106"/>
+<area shape="rect" title=" " alt="" coords="381,152,447,177"/>
+<area shape="poly" title=" " alt="" coords="357,102,395,140,391,144,353,106"/>
+<area shape="poly" title=" " alt="" coords="305,99,171,117,106,133,81,143,64,154,54,166,47,181,40,212,35,211,42,179,49,164,60,150,78,138,104,128,170,112,304,93"/>
+<area shape="poly" title=" " alt="" coords="378,101,509,146,508,151,376,107"/>
+<area shape="rect" href="Node_8h_source.html" title=" " alt="" coords="237,152,305,177"/>
+<area shape="poly" title=" " alt="" coords="333,106,295,144,291,140,330,102"/>
+<area shape="rect" href="Element_8h_source.html" title=" " alt="" coords="74,152,162,177"/>
+<area shape="poly" title=" " alt="" coords="308,107,168,150,167,145,306,101"/>
+<area shape="poly" title=" " alt="" coords="266,179,244,215,239,212,262,176"/>
+<area shape="poly" title=" " alt="" coords="285,176,324,214,320,218,281,180"/>
+<area shape="poly" title=" " alt="" coords="306,175,438,218,436,223,305,180"/>
+<area shape="poly" title=" " alt="" coords="238,179,82,226,81,221,236,174"/>
 </map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a97d832ae23af4f215e801e37e4f94254" id="r_a97d832ae23af4f215e801e37e4f94254"><td class="memItemLeft" align="right" valign="top"><a id="a97d832ae23af4f215e801e37e4f94254" name="a97d832ae23af4f215e801e37e4f94254"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>K</b>&#160;&#160;&#160;30</td></tr>
+<tr class="separator:a97d832ae23af4f215e801e37e4f94254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FEMain_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
-<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function that drives the finite element analysis process.  <br /></td></tr>
-<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627" id="r_a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FEMain_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function to perform finite element calculations and output results.  <br /></td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Main program for finite element analysis using a grid of nodes and elements. </p>
+<p>This program reads in node and element data, computes the stiffness matrix, and outputs results in various formats. It includes responses to assignment questions regarding optimization, matrix structure, and bandwidth.</p>
+<h1><a class="anchor" id="Description"></a>
+Description</h1>
+<p>The program:</p><ul>
+<li>Reads node and element data from files with extensions .node and .elem, based on the provided prefix.</li>
+<li>Builds the global stiffness matrix based on finite element analysis.</li>
+<li>Optimizes matrix multiplication using CBLAS (if available).</li>
+<li>Dumps matrix data to binary files for debugging.</li>
+<li>Computes the lower and upper bandwidths of the global stiffness matrix.</li>
+</ul>
+<dl class="section author"><dt>Author</dt><dd>Nilesh.R.Barandwal </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>16-11-2024 </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&#160;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -140,8 +177,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>argv</em>[]&#160;</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -151,16 +188,31 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Main function that drives the finite element analysis process. </p>
-<p>This function initializes the <a class="el" href="classFEGrid.html" title="A class that represents a finite element grid consisting of nodes and elements.">FEGrid</a> object, reads node and element data from files, performs calculations (e.g., gradient, area), and outputs the results.</p>
+<p>Main function to perform finite element calculations and output results. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">argc</td><td>The number of command-line arguments. </td></tr>
-    <tr><td class="paramname">argv</td><td>The array of command-line arguments. </td></tr>
+    <tr><td class="paramname">argc</td><td>Argument count (should be 2 for node and element file inputs). </td></tr>
+    <tr><td class="paramname">argv</td><td>Argument values (expects a file prefix as the argument). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns 0 if successful, or a non-zero error code if an error occurs. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int Status code (0 for success, 1 for error).</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The input files should have the <code>.node</code> and <code>.elem</code> extensions based on the provided prefix. </dd></dl>
+<p>Poisson operator over the grid elements to compute element matrices.</p>
+<p>This loop iterates over all grid elements, computes the stiffness matrix for each element, and assembles the global stiffness matrix.</p>
+<p>Q1. Use CBLAS to perform matrix multiplication for B^T * C. Replaces lines 70-76 by calling the CBLAS function <code>cblas_dgemm</code> to compute <code>kijpartial = B^T * C</code>.</p>
+<p>This single line performs the matrix multiplication for <code>B^T * C</code> efficiently using the CBLAS library to optimize performance.</p>
+<p>Q2: Dump kijpartial matrix data to a binary file named "kijdump.bin".</p>
+<p>This routine writes the kijpartial matrix in binary format for debugging purposes.</p>
+<p>Q3: Determine the structure of the global matrix <code>globalK</code>.</p>
+<p>The structure of the global stiffness matrix <code>globalK</code> is assessed based on the pattern of non-zero elements.</p><ul>
+<li>Options: 1) Tridiagonal 2) Diagonal 3) BiDiagonal 4) Banded 5) Upper Hessenberg 6) Lower Hessenberg</li>
+</ul>
+<p>Q4: Compute the lower and upper bandwidth of the matrix <code>globalK</code>.</p>
+<ul>
+<li>Part A: Lower Bandwidth</li>
+<li>Part B: Upper Bandwidth</li>
+</ul>
 
 </div>
 </div>

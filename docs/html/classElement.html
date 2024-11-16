@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Element Class Reference</title>
+<title>CS601: Software Development for Scientific Computing - CS24MT018: Element Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">CS601: Software Development for Scientific Computing - CS24MT018
    </div>
+   <div id="projectbrief">Programming Assignment 2 - Software for Computation on Grids</div>
   </td>
  </tr>
  </tbody>
@@ -76,7 +77,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A class to represent a finite element in the grid.  
+<p>Represents an element in a finite element mesh.  
  <a href="classElement.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Element_8h_source.html">Element.h</a>&gt;</code></p>
@@ -84,21 +85,21 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab0d0e20be9a36ae676202db753faeec9" id="r_ab0d0e20be9a36ae676202db753faeec9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#ab0d0e20be9a36ae676202db753faeec9">Element</a> ()</td></tr>
-<tr class="memdesc:ab0d0e20be9a36ae676202db753faeec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor that initializes the element with default values.  <br /></td></tr>
+<tr class="memdesc:ab0d0e20be9a36ae676202db753faeec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the <a class="el" href="classElement.html" title="Represents an element in a finite element mesh.">Element</a> class.  <br /></td></tr>
 <tr class="separator:ab0d0e20be9a36ae676202db753faeec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc7792b73b8f1992a9cbd7ab28220f34" id="r_adc7792b73b8f1992a9cbd7ab28220f34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#adc7792b73b8f1992a9cbd7ab28220f34">Element</a> (int a_vertices[<a class="el" href="Element_8h.html#af80124daa53dc4006646e0196cc085ec">VERTICES</a>])</td></tr>
-<tr class="memdesc:adc7792b73b8f1992a9cbd7ab28220f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that initializes the element with specific vertices.  <br /></td></tr>
+<tr class="memitem:adc7792b73b8f1992a9cbd7ab28220f34" id="r_adc7792b73b8f1992a9cbd7ab28220f34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#adc7792b73b8f1992a9cbd7ab28220f34">Element</a> (int a_vertices[VERTICES])</td></tr>
+<tr class="memdesc:adc7792b73b8f1992a9cbd7ab28220f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that initializes the vertices of the element.  <br /></td></tr>
 <tr class="separator:adc7792b73b8f1992a9cbd7ab28220f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89d8e593368ab1e6e3c1df9696d4262f" id="r_a89d8e593368ab1e6e3c1df9696d4262f"><td class="memItemLeft" align="right" valign="top">const int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a89d8e593368ab1e6e3c1df9696d4262f">operator[]</a> (const int &amp;a_localNodeNumber) const</td></tr>
-<tr class="memdesc:a89d8e593368ab1e6e3c1df9696d4262f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor function to get the vertex at a specific local node number.  <br /></td></tr>
+<tr class="memdesc:a89d8e593368ab1e6e3c1df9696d4262f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor for vertex index based on local node number.  <br /></td></tr>
 <tr class="separator:a89d8e593368ab1e6e3c1df9696d4262f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55cd78eef09da48b52ab85ccbae3777b" id="r_a55cd78eef09da48b52ab85ccbae3777b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a55cd78eef09da48b52ab85ccbae3777b">vertices</a> (int a_vertices[<a class="el" href="Element_8h.html#af80124daa53dc4006646e0196cc085ec">VERTICES</a>]) const</td></tr>
-<tr class="memdesc:a55cd78eef09da48b52ab85ccbae3777b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get the vertices of the element.  <br /></td></tr>
+<tr class="memitem:a55cd78eef09da48b52ab85ccbae3777b" id="r_a55cd78eef09da48b52ab85ccbae3777b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a55cd78eef09da48b52ab85ccbae3777b">vertices</a> (int a_vertices[VERTICES]) const</td></tr>
+<tr class="memdesc:a55cd78eef09da48b52ab85ccbae3777b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the vertex indices of the element.  <br /></td></tr>
 <tr class="separator:a55cd78eef09da48b52ab85ccbae3777b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class to represent a finite element in the grid. </p>
-<p>The <a class="el" href="classElement.html" title="A class to represent a finite element in the grid.">Element</a> class stores the three vertices of a triangular element. It provides methods for accessing the vertex data and for initializing an element with specific vertices. </p>
+<div class="textblock"><p>Represents an element in a finite element mesh. </p>
+<p>Stores vertex indices for each element, allowing access to its vertices. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab0d0e20be9a36ae676202db753faeec9" name="ab0d0e20be9a36ae676202db753faeec9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0d0e20be9a36ae676202db753faeec9">&#9670;&#160;</a></span>Element() <span class="overload">[1/2]</span></h2>
@@ -115,10 +116,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Default constructor that initializes the element with default values. </p>
-<p>Default constructor for the <a class="el" href="classElement.html" title="A class to represent a finite element in the grid.">Element</a> class.</p>
-<p>This constructor sets all vertices to -1. It is used when no specific vertex data is provided.</p>
-<p>This constructor initializes the element with default values, setting all vertices to -1. </p>
+<p>Default constructor for the <a class="el" href="classElement.html" title="Represents an element in a finite element mesh.">Element</a> class. </p>
+<p>Default constructor for initializing an element with invalid vertices.</p>
+<p>This constructor initializes all the element's vertices to -1, representing an uninitialized or invalid state. </p>
 
 </div>
 </div>
@@ -138,12 +138,18 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor that initializes the element with specific vertices. </p>
-<p>Constructor to initialize an <a class="el" href="classElement.html" title="A class to represent a finite element in the grid.">Element</a> with specific vertices.</p>
+<p>Constructor that initializes the vertices of the element. </p>
+<p>Constructor for initializing an element with specified vertices.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a_vertices</td><td>An array of integers representing the vertex IDs for this element. The array should contain 3 integers, one for each vertex.</td></tr>
-    <tr><td class="paramname">a_vertices</td><td>An array of integers representing the vertex IDs for this element. The array must contain 3 integers, one for each vertex. </td></tr>
+    <tr><td class="paramname">a_vertices</td><td>Array containing indices of the vertices.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This constructor takes an array of integers representing the vertices of the element and initializes the element with the given vertices.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a_vertices</td><td>Array of integers representing the vertices of the element. </td></tr>
   </table>
   </dd>
 </dl>
@@ -167,22 +173,23 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Accessor function to get the vertex at a specific local node number. </p>
+<p>Accessor for vertex index based on local node number. </p>
+<p>Accessor function to get a vertex by its local node number.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a_localNodeNumber</td><td>The index of the local node (0-2). </td></tr>
+    <tr><td class="paramname">a_localNodeNumber</td><td>Index of the local node. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A constant reference to the vertex at the specified local node index. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The index is expected to be between 0 and 2, inclusive.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The global index of the specified local node.</dd></dl>
+<p>This overloaded operator allows accessing the vertices of the element using the array indexing syntax. The local node number must be valid (less than the total number of vertices).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a_localNodeNumber</td><td>The index of the local node (0-2). </td></tr>
+    <tr><td class="paramname">a_localNodeNumber</td><td>The local node number (index) of the vertex. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A constant reference to the vertex ID at the specified local node index. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>const int&amp; The vertex at the specified index. </dd></dl>
 
 </div>
 </div>
@@ -202,13 +209,18 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Function to get the vertices of the element. </p>
-<p>Retrieves the vertices of the element.</p>
-<p>This function copies the vertices of the element into the provided array.</p>
+<p>Retrieves the vertex indices of the element. </p>
+<p>Copies the vertices of the element into the provided array.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a_vertices</td><td>An array to store the vertices of the element. This array must be pre-allocated with 3 elements.</td></tr>
-    <tr><td class="paramname">a_vertices</td><td>An array to store the vertices of the element. This array must be pre-allocated with 3 elements. </td></tr>
+    <tr><td class="paramname">a_vertices</td><td>Array to store vertex indices.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function copies all vertices of the current element into a user-provided array.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a_vertices</td><td>Array to store the vertices of the element. </td></tr>
   </table>
   </dd>
 </dl>

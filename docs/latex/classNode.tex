@@ -1,0 +1,145 @@
+\doxysection{Node Class Reference}
+\hypertarget{classNode}{}\label{classNode}\index{Node@{Node}}
+
+
+Represents a node in a finite element mesh.  
+
+
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNode_ad7a34779cad45d997bfd6d3d8043c75f}{Node}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classNode}{Node} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNode_a50cc5b7f53d96438587babdfa4e4d16d}{Node}} (double a\+\_\+position\mbox{[}DIM\mbox{]}, const int \&a\+\_\+interior\+Node\+ID, const bool \&a\+\_\+is\+Interior)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the node with position, ID, and interior status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNode_ad62654eff509d42462a38dede2884466}{get\+Position}} (double a\+\_\+position\mbox{[}DIM\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em Retrieves the position of the node. \end{DoxyCompactList}\item 
+const int \& \mbox{\hyperlink{classNode_a5fe6473182c18d99ac222b0b0665ed67}{get\+Interior\+Node\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Gets the ID of the node if it is an interior node. \end{DoxyCompactList}\item 
+const bool \& \mbox{\hyperlink{classNode_adab96d2b008e2cdcf41e3f22ba3bd6ae}{is\+Interior}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the node is an interior node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a node in a finite element mesh. 
+
+Stores the position, interior status, and ID of the node within the mesh. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classNode_ad7a34779cad45d997bfd6d3d8043c75f}\label{classNode_ad7a34779cad45d997bfd6d3d8043c75f} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{classNode}{Node} class. 
+
+Initializes the node with a position set to a large value ({\ttfamily FLT\+\_\+\+MAX}), indicating an uninitialized state. Also sets the node as an interior node by default with an invalid interior node ID ({\ttfamily -\/1}). \Hypertarget{classNode_a50cc5b7f53d96438587babdfa4e4d16d}\label{classNode_a50cc5b7f53d96438587babdfa4e4d16d} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+position\mbox{[}\+DIM\mbox{]},  }\item[{const int \&}]{a\+\_\+interior\+Node\+ID,  }\item[{const bool \&}]{a\+\_\+is\+Interior }\end{DoxyParamCaption})}
+
+
+
+Constructor that initializes the node with position, ID, and interior status. 
+
+Constructor for the \doxylink{classNode}{Node} class that initializes the node with a specified position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+position} & Array storing the node\textquotesingle{}s x and y coordinates. \\
+\hline
+{\em a\+\_\+interior\+Node\+ID} & ID of the node if it is an interior node. \\
+\hline
+{\em a\+\_\+is\+Interior} & Boolean indicating if the node is an interior node.\\
+\hline
+\end{DoxyParams}
+Initializes the node with a given position in space, an interior node ID, and a flag indicating whether the node is an interior node or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+position} & An array representing the position of the node in space (with DIM dimensions). \\
+\hline
+{\em a\+\_\+interior\+Node\+ID} & The ID of the node if it is an interior node. It is set to -\/1 if the node is on the boundary. \\
+\hline
+{\em a\+\_\+is\+Interior} & A boolean flag indicating whether the node is an interior node (true) or a boundary node (false). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classNode_a5fe6473182c18d99ac222b0b0665ed67}\label{classNode_a5fe6473182c18d99ac222b0b0665ed67} 
+\index{Node@{Node}!getInteriorNodeID@{getInteriorNodeID}}
+\index{getInteriorNodeID@{getInteriorNodeID}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getInteriorNodeID()}{getInteriorNodeID()}}
+{\footnotesize\ttfamily const int \& Node\+::get\+Interior\+Node\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the ID of the node if it is an interior node. 
+
+Gets the interior node ID.
+
+\begin{DoxyReturn}{Returns}
+The interior node ID.
+\end{DoxyReturn}
+This function returns the ID of the node if it is an interior node. If the node is on the boundary, this ID will typically be invalid (e.\+g., -\/1).
+
+\begin{DoxyReturn}{Returns}
+const int\& The interior node ID. 
+\end{DoxyReturn}
+\Hypertarget{classNode_ad62654eff509d42462a38dede2884466}\label{classNode_ad62654eff509d42462a38dede2884466} 
+\index{Node@{Node}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily void Node\+::get\+Position (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+x\mbox{[}\+DIM\mbox{]} }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the position of the node. 
+
+Gets the position of the node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+position} & Array to store the node\textquotesingle{}s x and y coordinates.\\
+\hline
+\end{DoxyParams}
+This function retrieves the position of the node and stores it in the provided array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+x} & An array where the node\textquotesingle{}s position will be stored (with DIM dimensions). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classNode_adab96d2b008e2cdcf41e3f22ba3bd6ae}\label{classNode_adab96d2b008e2cdcf41e3f22ba3bd6ae} 
+\index{Node@{Node}!isInterior@{isInterior}}
+\index{isInterior@{isInterior}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{isInterior()}{isInterior()}}
+{\footnotesize\ttfamily const bool \& Node\+::is\+Interior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the node is an interior node. 
+
+\begin{DoxyReturn}{Returns}
+True if the node is interior, false otherwise.
+\end{DoxyReturn}
+This function returns a boolean value indicating whether the node is an interior node.
+
+\begin{DoxyReturn}{Returns}
+const bool\& A boolean value indicating whether the node is an interior node (true) or not (false). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/Node.\+h\item 
+src/\mbox{\hyperlink{Node_8cpp}{Node.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,303 @@
+\doxysection{FEGrid Class Reference}
+\hypertarget{classFEGrid}{}\label{classFEGrid}\index{FEGrid@{FEGrid}}
+
+
+Represents a finite element grid.  
+
+
+
+
+{\ttfamily \#include $<$FEGrid.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFEGrid_a4c1cf84d28305d61abb3f00dd639cfed}{FEGrid}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classFEGrid}{FEGrid} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFEGrid_a990a21298505f204a9a0765a2918520f}{FEGrid}} (const std\+::string \&node\+File, const std\+::string \&a\+\_\+element\+File\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the grid with node and element data files. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFEGrid_a8eced440d19cd67ec08f458e5d383544}{gradient}} (double a\+\_\+gradient\mbox{[}DIM\mbox{]}, const int \&a\+\_\+elt\+Number, const int \&a\+\_\+local\+Node\+Number) const
+\begin{DoxyCompactList}\small\item\em Computes the gradient of a shape function for an element at a specified local node. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classFEGrid_afd14f5039abfdd4b5979b8c719cc44da}{element\+Area}} (const int \&a\+\_\+elt\+Number) const
+\begin{DoxyCompactList}\small\item\em Calculates the area of a specified element. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classNode}{Node}} \& \mbox{\hyperlink{classFEGrid_a8abc40a61e7f1420d0c01329f9e6cca7}{get\+Node}} (const int \&a\+\_\+elt\+Number, const int \&a\+\_\+local\+Node\+Number) const
+\begin{DoxyCompactList}\small\item\em Retrieves a node of an element by element and local node number. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFEGrid_aeabee5101ea56d322d873962752fdf14}{get\+Num\+Elts}} () const
+\begin{DoxyCompactList}\small\item\em Gets the total number of elements in the grid. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFEGrid_adfdad3532b639b8ac0911bcdea0cb0f4}{get\+Num\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em Gets the total number of nodes in the grid. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFEGrid_a45de32051fb410c878017d1ac3af0911}{get\+Num\+Interior\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of interior nodes in the grid. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classElement}{Element}} \& \mbox{\hyperlink{classFEGrid_ad62a4c18e20495c4b5689b0ba8b79285}{element}} (int i) const
+\begin{DoxyCompactList}\small\item\em Accessor for a specified element by index. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classNode}{Node}} \& \mbox{\hyperlink{classFEGrid_aa26953a7d6970d8fce738c90510f8f7d}{node}} (int i) const
+\begin{DoxyCompactList}\small\item\em Accessor for a specified node by index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a finite element grid. 
+
+This class handles the structure of the grid, including nodes and elements, and provides methods for calculations over elements, such as area and gradient computations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFEGrid_a4c1cf84d28305d61abb3f00dd639cfed}\label{classFEGrid_a4c1cf84d28305d61abb3f00dd639cfed} 
+\index{FEGrid@{FEGrid}!FEGrid@{FEGrid}}
+\index{FEGrid@{FEGrid}!FEGrid@{FEGrid}}
+\doxysubsubsection{\texorpdfstring{FEGrid()}{FEGrid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily FEGrid\+::\+FEGrid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{classFEGrid}{FEGrid} class. 
+
+Initializes an empty grid with zero interior nodes. \Hypertarget{classFEGrid_a990a21298505f204a9a0765a2918520f}\label{classFEGrid_a990a21298505f204a9a0765a2918520f} 
+\index{FEGrid@{FEGrid}!FEGrid@{FEGrid}}
+\index{FEGrid@{FEGrid}!FEGrid@{FEGrid}}
+\doxysubsubsection{\texorpdfstring{FEGrid()}{FEGrid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily FEGrid\+::\+FEGrid (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+node\+File\+Name,  }\item[{const std\+::string \&}]{a\+\_\+element\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+Constructor that initializes the grid with node and element data files. 
+
+Constructor for the \doxylink{classFEGrid}{FEGrid} class that initializes the grid using node and element files.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+File} & Filename of the node data file. \\
+\hline
+{\em a\+\_\+element\+File\+Name} & Filename of the element data file.\\
+\hline
+\end{DoxyParams}
+This constructor reads the node and element data from the specified files and initializes the grid\textquotesingle{}s nodes and elements. It also counts the number of interior nodes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+node\+File\+Name} & The name of the file containing the node data. \\
+\hline
+{\em a\+\_\+element\+File\+Name} & The name of the file containing the element data. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFEGrid_ad62a4c18e20495c4b5689b0ba8b79285}\label{classFEGrid_ad62a4c18e20495c4b5689b0ba8b79285} 
+\index{FEGrid@{FEGrid}!element@{element}}
+\index{element@{element}!FEGrid@{FEGrid}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classElement}{Element}} \& FEGrid\+::element (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Accessor for a specified element by index. 
+
+Retrieves an element from the grid by its index.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Index of the element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the requested \doxylink{classElement}{Element}.
+\end{DoxyReturn}
+This function returns a reference to the element at the specified index.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const \doxylink{classElement}{Element}\& The element at the specified index. 
+\end{DoxyReturn}
+\Hypertarget{classFEGrid_afd14f5039abfdd4b5979b8c719cc44da}\label{classFEGrid_afd14f5039abfdd4b5979b8c719cc44da} 
+\index{FEGrid@{FEGrid}!elementArea@{elementArea}}
+\index{elementArea@{elementArea}!FEGrid@{FEGrid}}
+\doxysubsubsection{\texorpdfstring{elementArea()}{elementArea()}}
+{\footnotesize\ttfamily double FEGrid\+::element\+Area (\begin{DoxyParamCaption}\item[{const int \&}]{a\+\_\+elt\+Number }\end{DoxyParamCaption}) const}
+
+
+
+Calculates the area of a specified element. 
+
+Calculates the area of an element.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+elt\+Number} & \doxylink{classElement}{Element} number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The area of the element.
+\end{DoxyReturn}
+This function calculates the area of a triangular element in 2D using the node positions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+elt\+Number} & The element number for which the area is calculated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The area of the element. 
+\end{DoxyReturn}
+\Hypertarget{classFEGrid_a8abc40a61e7f1420d0c01329f9e6cca7}\label{classFEGrid_a8abc40a61e7f1420d0c01329f9e6cca7} 
+\index{FEGrid@{FEGrid}!getNode@{getNode}}
+\index{getNode@{getNode}!FEGrid@{FEGrid}}
+\doxysubsubsection{\texorpdfstring{getNode()}{getNode()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classNode}{Node}} \& FEGrid\+::get\+Node (\begin{DoxyParamCaption}\item[{const int \&}]{a\+\_\+elt\+Number,  }\item[{const int \&}]{a\+\_\+local\+Node\+Number }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves a node of an element by element and local node number. 
+
+Gets a node from a specific element by local node number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+elt\+Number} & \doxylink{classElement}{Element} number. \\
+\hline
+{\em a\+\_\+local\+Node\+Number} & Local node number within the element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the requested \doxylink{classNode}{Node}.
+\end{DoxyReturn}
+This function retrieves a node from a given element using its local node number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+elt\+Number} & The element number. \\
+\hline
+{\em a\+\_\+local\+Node\+Number} & The local node number within the element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const \doxylink{classNode}{Node}\& The node corresponding to the local node number in the specified element. 
+\end{DoxyReturn}
+\Hypertarget{classFEGrid_aeabee5101ea56d322d873962752fdf14}\label{classFEGrid_aeabee5101ea56d322d873962752fdf14} 
+\index{FEGrid@{FEGrid}!getNumElts@{getNumElts}}
+\index{getNumElts@{getNumElts}!FEGrid@{FEGrid}}
+\doxysubsubsection{\texorpdfstring{getNumElts()}{getNumElts()}}
+{\footnotesize\ttfamily int FEGrid\+::get\+Num\+Elts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the total number of elements in the grid. 
+
+Gets the number of elements in the grid.
+
+\begin{DoxyReturn}{Returns}
+Number of elements.
+\end{DoxyReturn}
+This function returns the total number of elements in the grid.
+
+\begin{DoxyReturn}{Returns}
+int The number of elements. 
+\end{DoxyReturn}
+\Hypertarget{classFEGrid_a45de32051fb410c878017d1ac3af0911}\label{classFEGrid_a45de32051fb410c878017d1ac3af0911} 
+\index{FEGrid@{FEGrid}!getNumInteriorNodes@{getNumInteriorNodes}}
+\index{getNumInteriorNodes@{getNumInteriorNodes}!FEGrid@{FEGrid}}
+\doxysubsubsection{\texorpdfstring{getNumInteriorNodes()}{getNumInteriorNodes()}}
+{\footnotesize\ttfamily int FEGrid\+::get\+Num\+Interior\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of interior nodes in the grid. 
+
+\begin{DoxyReturn}{Returns}
+Number of interior nodes.
+\end{DoxyReturn}
+This function returns the total number of interior nodes in the grid (not on the boundary).
+
+\begin{DoxyReturn}{Returns}
+int The number of interior nodes. 
+\end{DoxyReturn}
+\Hypertarget{classFEGrid_adfdad3532b639b8ac0911bcdea0cb0f4}\label{classFEGrid_adfdad3532b639b8ac0911bcdea0cb0f4} 
+\index{FEGrid@{FEGrid}!getNumNodes@{getNumNodes}}
+\index{getNumNodes@{getNumNodes}!FEGrid@{FEGrid}}
+\doxysubsubsection{\texorpdfstring{getNumNodes()}{getNumNodes()}}
+{\footnotesize\ttfamily int FEGrid\+::get\+Num\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the total number of nodes in the grid. 
+
+Gets the number of nodes in the grid.
+
+\begin{DoxyReturn}{Returns}
+Number of nodes.
+\end{DoxyReturn}
+This function returns the total number of nodes in the grid.
+
+\begin{DoxyReturn}{Returns}
+int The number of nodes. 
+\end{DoxyReturn}
+\Hypertarget{classFEGrid_a8eced440d19cd67ec08f458e5d383544}\label{classFEGrid_a8eced440d19cd67ec08f458e5d383544} 
+\index{FEGrid@{FEGrid}!gradient@{gradient}}
+\index{gradient@{gradient}!FEGrid@{FEGrid}}
+\doxysubsubsection{\texorpdfstring{gradient()}{gradient()}}
+{\footnotesize\ttfamily void FEGrid\+::gradient (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+gradient\mbox{[}\+DIM\mbox{]},  }\item[{const int \&}]{a\+\_\+elt\+Number,  }\item[{const int \&}]{a\+\_\+node\+Number }\end{DoxyParamCaption}) const}
+
+
+
+Computes the gradient of a shape function for an element at a specified local node. 
+
+Calculates the gradient of shape functions (N1, N2, N3) for a given element.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+gradient} & Array to store the computed gradient. \\
+\hline
+{\em a\+\_\+elt\+Number} & \doxylink{classElement}{Element} number. \\
+\hline
+{\em a\+\_\+local\+Node\+Number} & Local node number within the element.\\
+\hline
+\end{DoxyParams}
+This function computes the gradient of the shape functions for a triangular element in 2D. It calculates the gradient based on the positions of the element\textquotesingle{}s nodes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+gradient} & The output array that will store the gradient of the shape functions. \\
+\hline
+{\em a\+\_\+elt\+Number} & The element number for which the gradient is computed. \\
+\hline
+{\em a\+\_\+node\+Number} & The local node number within the element for which the gradient is calculated. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFEGrid_aa26953a7d6970d8fce738c90510f8f7d}\label{classFEGrid_aa26953a7d6970d8fce738c90510f8f7d} 
+\index{FEGrid@{FEGrid}!node@{node}}
+\index{node@{node}!FEGrid@{FEGrid}}
+\doxysubsubsection{\texorpdfstring{node()}{node()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classNode}{Node}} \& FEGrid\+::node (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Accessor for a specified node by index. 
+
+Retrieves a node from the grid by its index.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Index of the node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the requested \doxylink{classNode}{Node}.
+\end{DoxyReturn}
+This function returns a reference to the node at the specified index.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const \doxylink{classNode}{Node}\& The node at the specified index. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/FEGrid.\+h\item 
+src/\mbox{\hyperlink{FEGrid_8cpp}{FEGrid.\+cpp}}\end{DoxyCompactItemize}

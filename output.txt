@@ -1,0 +1,3 @@
+Banded
+Lower Bandwidth: 2
+Upper Bandwidth: 2

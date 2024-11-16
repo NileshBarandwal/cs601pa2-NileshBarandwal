@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Check if the correct number of arguments is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <file prefix (no extension)>"
+    exit 1
+fi
+
+# Assign argument to the file prefix variable
+FILE_PREFIX=$1
+
+# Build Part II
+make part2
+
+# Run the executable with the file prefix (you may need to modify the program to handle LENGTH, TIME_STEP, and SPACE_STEP)
+./part2_executable $FILE_PREFIX
+

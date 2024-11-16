@@ -1,0 +1,129 @@
+\doxysection{Element Class Reference}
+\hypertarget{classElement}{}\label{classElement}\index{Element@{Element}}
+
+
+Represents an element in a finite element mesh.  
+
+
+
+
+{\ttfamily \#include $<$Element.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classElement_ab0d0e20be9a36ae676202db753faeec9}{Element}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classElement}{Element} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classElement_adc7792b73b8f1992a9cbd7ab28220f34}{Element}} (int a\+\_\+vertices\mbox{[}VERTICES\mbox{]})
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the vertices of the element. \end{DoxyCompactList}\item 
+const int \& \mbox{\hyperlink{classElement_a89d8e593368ab1e6e3c1df9696d4262f}{operator\mbox{[}$\,$\mbox{]}}} (const int \&a\+\_\+local\+Node\+Number) const
+\begin{DoxyCompactList}\small\item\em Accessor for vertex index based on local node number. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classElement_a55cd78eef09da48b52ab85ccbae3777b}{vertices}} (int a\+\_\+vertices\mbox{[}VERTICES\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em Retrieves the vertex indices of the element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an element in a finite element mesh. 
+
+Stores vertex indices for each element, allowing access to its vertices. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classElement_ab0d0e20be9a36ae676202db753faeec9}\label{classElement_ab0d0e20be9a36ae676202db753faeec9} 
+\index{Element@{Element}!Element@{Element}}
+\index{Element@{Element}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Element\+::\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{classElement}{Element} class. 
+
+Default constructor for initializing an element with invalid vertices.
+
+This constructor initializes all the element\textquotesingle{}s vertices to -\/1, representing an uninitialized or invalid state. \Hypertarget{classElement_adc7792b73b8f1992a9cbd7ab28220f34}\label{classElement_adc7792b73b8f1992a9cbd7ab28220f34} 
+\index{Element@{Element}!Element@{Element}}
+\index{Element@{Element}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Element\+::\+Element (\begin{DoxyParamCaption}\item[{int}]{a\+\_\+vertices\mbox{[}\+VERTICES\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Constructor that initializes the vertices of the element. 
+
+Constructor for initializing an element with specified vertices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+vertices} & Array containing indices of the vertices.\\
+\hline
+\end{DoxyParams}
+This constructor takes an array of integers representing the vertices of the element and initializes the element with the given vertices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+vertices} & Array of integers representing the vertices of the element. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classElement_a89d8e593368ab1e6e3c1df9696d4262f}\label{classElement_a89d8e593368ab1e6e3c1df9696d4262f} 
+\index{Element@{Element}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily const int \& Element\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const int \&}]{a\+\_\+local\+Node\+Number }\end{DoxyParamCaption}) const}
+
+
+
+Accessor for vertex index based on local node number. 
+
+Accessor function to get a vertex by its local node number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+local\+Node\+Number} & Index of the local node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The global index of the specified local node.
+\end{DoxyReturn}
+This overloaded operator allows accessing the vertices of the element using the array indexing syntax. The local node number must be valid (less than the total number of vertices).
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+local\+Node\+Number} & The local node number (index) of the vertex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const int\& The vertex at the specified index. 
+\end{DoxyReturn}
+\Hypertarget{classElement_a55cd78eef09da48b52ab85ccbae3777b}\label{classElement_a55cd78eef09da48b52ab85ccbae3777b} 
+\index{Element@{Element}!vertices@{vertices}}
+\index{vertices@{vertices}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{vertices()}{vertices()}}
+{\footnotesize\ttfamily void Element\+::vertices (\begin{DoxyParamCaption}\item[{int}]{a\+\_\+vertices\mbox{[}\+VERTICES\mbox{]} }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the vertex indices of the element. 
+
+Copies the vertices of the element into the provided array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+vertices} & Array to store vertex indices.\\
+\hline
+\end{DoxyParams}
+This function copies all vertices of the current element into a user-\/provided array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+vertices} & Array to store the vertices of the element. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/Element.\+h\item 
+src/\mbox{\hyperlink{Element_8cpp}{Element.\+cpp}}\end{DoxyCompactItemize}

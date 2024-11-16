@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Node Class Reference</title>
+<title>CS601: Software Development for Scientific Computing - CS24MT018: Node Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">CS601: Software Development for Scientific Computing - CS24MT018
    </div>
+   <div id="projectbrief">Programming Assignment 2 - Software for Computation on Grids</div>
   </td>
  </tr>
  </tbody>
@@ -76,7 +77,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A class that represents a node in a finite element mesh.  
+<p>Represents a node in a finite element mesh.  
  <a href="classNode.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Node_8h_source.html">Node.h</a>&gt;</code></p>
@@ -84,24 +85,24 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad7a34779cad45d997bfd6d3d8043c75f" id="r_ad7a34779cad45d997bfd6d3d8043c75f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ad7a34779cad45d997bfd6d3d8043c75f">Node</a> ()</td></tr>
-<tr class="memdesc:ad7a34779cad45d997bfd6d3d8043c75f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the <a class="el" href="classNode.html" title="A class that represents a node in a finite element mesh.">Node</a> class.  <br /></td></tr>
+<tr class="memdesc:ad7a34779cad45d997bfd6d3d8043c75f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the <a class="el" href="classNode.html" title="Represents a node in a finite element mesh.">Node</a> class.  <br /></td></tr>
 <tr class="separator:ad7a34779cad45d997bfd6d3d8043c75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50cc5b7f53d96438587babdfa4e4d16d" id="r_a50cc5b7f53d96438587babdfa4e4d16d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a50cc5b7f53d96438587babdfa4e4d16d">Node</a> (double a_position[<a class="el" href="Node_8h.html#ac25189db92959bff3c6c2adf4c34b50a">DIM</a>], const int &amp;a_interiorNodeID, const bool &amp;a_isInterior)</td></tr>
-<tr class="memdesc:a50cc5b7f53d96438587babdfa4e4d16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for initializing a <a class="el" href="classNode.html" title="A class that represents a node in a finite element mesh.">Node</a> with a given position, interior node ID, and interior status.  <br /></td></tr>
+<tr class="memitem:a50cc5b7f53d96438587babdfa4e4d16d" id="r_a50cc5b7f53d96438587babdfa4e4d16d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a50cc5b7f53d96438587babdfa4e4d16d">Node</a> (double a_position[DIM], const int &amp;a_interiorNodeID, const bool &amp;a_isInterior)</td></tr>
+<tr class="memdesc:a50cc5b7f53d96438587babdfa4e4d16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that initializes the node with position, ID, and interior status.  <br /></td></tr>
 <tr class="separator:a50cc5b7f53d96438587babdfa4e4d16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad62654eff509d42462a38dede2884466" id="r_ad62654eff509d42462a38dede2884466"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ad62654eff509d42462a38dede2884466">getPosition</a> (double a_position[<a class="el" href="Node_8h.html#ac25189db92959bff3c6c2adf4c34b50a">DIM</a>]) const</td></tr>
-<tr class="memdesc:ad62654eff509d42462a38dede2884466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the position of the node.  <br /></td></tr>
+<tr class="memitem:ad62654eff509d42462a38dede2884466" id="r_ad62654eff509d42462a38dede2884466"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ad62654eff509d42462a38dede2884466">getPosition</a> (double a_position[DIM]) const</td></tr>
+<tr class="memdesc:ad62654eff509d42462a38dede2884466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the position of the node.  <br /></td></tr>
 <tr class="separator:ad62654eff509d42462a38dede2884466"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fe6473182c18d99ac222b0b0665ed67" id="r_a5fe6473182c18d99ac222b0b0665ed67"><td class="memItemLeft" align="right" valign="top">const int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a5fe6473182c18d99ac222b0b0665ed67">getInteriorNodeID</a> () const</td></tr>
-<tr class="memdesc:a5fe6473182c18d99ac222b0b0665ed67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the interior node ID.  <br /></td></tr>
+<tr class="memdesc:a5fe6473182c18d99ac222b0b0665ed67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the ID of the node if it is an interior node.  <br /></td></tr>
 <tr class="separator:a5fe6473182c18d99ac222b0b0665ed67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adab96d2b008e2cdcf41e3f22ba3bd6ae" id="r_adab96d2b008e2cdcf41e3f22ba3bd6ae"><td class="memItemLeft" align="right" valign="top">const bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#adab96d2b008e2cdcf41e3f22ba3bd6ae">isInterior</a> () const</td></tr>
 <tr class="memdesc:adab96d2b008e2cdcf41e3f22ba3bd6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the node is an interior node.  <br /></td></tr>
 <tr class="separator:adab96d2b008e2cdcf41e3f22ba3bd6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class that represents a node in a finite element mesh. </p>
-<p>This class stores the position of the node, whether it is an interior node, and its interior node ID. Nodes are the fundamental units in a finite element mesh and are used to define the grid's structure. </p>
+<div class="textblock"><p>Represents a node in a finite element mesh. </p>
+<p>Stores the position, interior status, and ID of the node within the mesh. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad7a34779cad45d997bfd6d3d8043c75f" name="ad7a34779cad45d997bfd6d3d8043c75f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7a34779cad45d997bfd6d3d8043c75f">&#9670;&#160;</a></span>Node() <span class="overload">[1/2]</span></h2>
@@ -118,9 +119,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Default constructor for the <a class="el" href="classNode.html" title="A class that represents a node in a finite element mesh.">Node</a> class. </p>
-<p>This constructor initializes the node with default values. The position is not set, and the node is not marked as interior. This constructor is typically used when the node data is to be set later.</p>
-<p>This constructor initializes the node with default values: position not set, interior node status is false, and ID is -1. </p>
+<p>Default constructor for the <a class="el" href="classNode.html" title="Represents a node in a finite element mesh.">Node</a> class. </p>
+<p>Initializes the node with a position set to a large value (<code>FLT_MAX</code>), indicating an uninitialized state. Also sets the node as an interior node by default with an invalid interior node ID (<code>-1</code>). </p>
 
 </div>
 </div>
@@ -156,22 +156,22 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor for initializing a <a class="el" href="classNode.html" title="A class that represents a node in a finite element mesh.">Node</a> with a given position, interior node ID, and interior status. </p>
-<p>Constructor to initialize a <a class="el" href="classNode.html" title="A class that represents a node in a finite element mesh.">Node</a> with a given position, interior node ID, and interior status.</p>
+<p>Constructor that initializes the node with position, ID, and interior status. </p>
+<p>Constructor for the <a class="el" href="classNode.html" title="Represents a node in a finite element mesh.">Node</a> class that initializes the node with a specified position.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a_position</td><td>An array representing the 2D position of the node. The position is stored in meters or another unit of length. </td></tr>
-    <tr><td class="paramname">a_interiorNodeID</td><td>The ID assigned to the interior node. This ID is used to uniquely identify interior nodes. </td></tr>
-    <tr><td class="paramname">a_isInterior</td><td>A boolean indicating whether the node is an interior node (true) or a boundary node (false).</td></tr>
+    <tr><td class="paramname">a_position</td><td>Array storing the node's x and y coordinates. </td></tr>
+    <tr><td class="paramname">a_interiorNodeID</td><td>ID of the node if it is an interior node. </td></tr>
+    <tr><td class="paramname">a_isInterior</td><td>Boolean indicating if the node is an interior node.</td></tr>
   </table>
   </dd>
 </dl>
-<p>This constructor initializes the node with the given position, interior node ID, and status. An interior node is one that is fully enclosed within the grid, while a boundary node lies on the grid's edge.</p>
+<p>Initializes the node with a given position in space, an interior node ID, and a flag indicating whether the node is an interior node or not.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a_position</td><td>An array representing the 2D position of the node. </td></tr>
-    <tr><td class="paramname">a_interiorNodeID</td><td>The ID assigned to the interior node. </td></tr>
-    <tr><td class="paramname">a_isInterior</td><td>A boolean indicating whether the node is an interior node. </td></tr>
+    <tr><td class="paramname">a_position</td><td>An array representing the position of the node in space (with DIM dimensions). </td></tr>
+    <tr><td class="paramname">a_interiorNodeID</td><td>The ID of the node if it is an interior node. It is set to -1 if the node is on the boundary. </td></tr>
+    <tr><td class="paramname">a_isInterior</td><td>A boolean flag indicating whether the node is an interior node (true) or a boundary node (false). </td></tr>
   </table>
   </dd>
 </dl>
@@ -194,10 +194,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the interior node ID. </p>
+<p>Gets the ID of the node if it is an interior node. </p>
+<p>Gets the interior node ID.</p>
 <dl class="section return"><dt>Returns</dt><dd>The interior node ID.</dd></dl>
-<p>This method returns the ID assigned to the interior node. The interior node ID is used for identification and indexing purposes within the grid.</p>
-<dl class="section return"><dt>Returns</dt><dd>The interior node ID. </dd></dl>
+<p>This function returns the ID of the node if it is an interior node. If the node is on the boundary, this ID will typically be invalid (e.g., -1).</p>
+<dl class="section return"><dt>Returns</dt><dd>const int&amp; The interior node ID. </dd></dl>
 
 </div>
 </div>
@@ -211,24 +212,24 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void Node::getPosition </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>a_position</em>[DIM]</td><td>)</td>
+          <td class="paramname"><em>a_x</em>[DIM]</td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the position of the node. </p>
-<p>Retrieves the position of the node.</p>
+<p>Retrieves the position of the node. </p>
+<p>Gets the position of the node.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a_position</td><td>An array to store the position of the node. The array should be pre-allocated with space for at least <code>DIM</code> elements.</td></tr>
+    <tr><td class="paramname">a_position</td><td>Array to store the node's x and y coordinates.</td></tr>
   </table>
   </dd>
 </dl>
-<p>This method retrieves the position of the node and stores it in the provided array. The position is typically given in meters or another unit of length.</p>
+<p>This function retrieves the position of the node and stores it in the provided array.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a_position</td><td>An array to store the position of the node. The array should have space for <code>DIM</code> elements. </td></tr>
+    <tr><td class="paramname">a_x</td><td>An array where the node's position will be stored (with DIM dimensions). </td></tr>
   </table>
   </dd>
 </dl>
@@ -251,9 +252,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checks if the node is an interior node. </p>
-<dl class="section return"><dt>Returns</dt><dd>A boolean indicating if the node is an interior node (true) or not (false).</dd></dl>
-<p>This method returns true if the node is an interior node, meaning it is not on the boundary of the grid. Otherwise, it returns false.</p>
-<dl class="section return"><dt>Returns</dt><dd>A boolean indicating if the node is an interior node. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the node is interior, false otherwise.</dd></dl>
+<p>This function returns a boolean value indicating whether the node is an interior node.</p>
+<dl class="section return"><dt>Returns</dt><dd>const bool&amp; A boolean value indicating whether the node is an interior node (true) or not (false). </dd></dl>
 
 </div>
 </div>
